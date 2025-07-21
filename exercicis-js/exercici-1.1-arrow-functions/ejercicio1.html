@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercici 1.1: Arrow functions</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="bg">
+  <main class="container">
+    <h1 class="title mb">Exercici 1.1: Arrow functions</h1>
+
+    <h3 class="level">Nivell 1</h3>
+    <section class="mb">
+      <h4 class="subtitle">Exercici 1</h4>
+      <p>Conversió de funcions: Tens una funció <code>add</code> que accepta dos paràmetres i retorna la seva suma. Converteix-la en una funció de fletxa. Per exemple: <code>function add(a, b) {'{'}return a + b;{'}'}</code></p>
+      <pre class="code"><code>const add = (a, b) => a + b;</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>console.log(add(2, 3));</code></pre>
+      <button class="btn" onclick="console.log(add(2, 3));">Ejecutar</button>
+    </section>
+
+    <section class="mb">
+      <h4 class="subtitle">Exercici 2</h4>
+      <p>Funció de fletxa sense paràmetres: Crea una funció de fletxa anomenada <code>randomNumber</code> que no necessiti paràmetres i que retorni un número aleatori entre 0 i 100.</p>
+      <pre class="code"><code>const randomNumber = () => Math.floor(Math.random() * 101);</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>console.log(randomNumber());</code></pre>
+      <button class="btn" onclick="console.log(randomNumber());">Ejecutar</button>
+    </section>
+
+    <section class="mb">
+      <h4 class="subtitle">Exercici 3</h4>
+      <p>Ús de 'this' en les funcions de fletxa: Crea una classe <code>Person</code> que tingui una propietat <code>name</code> i una funció <code>greet</code> que utilitzi una funció de fletxa. La funció ha d'imprimir una salutació que inclogui el nom de la persona. Per exemple: <code>console.log(Hola, ${'{'}this.name{'}'});</code></p>
+      <pre class="code"><code>class Person {
+  constructor(name) {
+    this.name = name;
+    this.greet = () => {
+      console.log(`Hola, ${'{'}this.name{'}'}`);
+    }
+  }
+}</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>const persona = new Person('Carlos');
+persona.greet();</code></pre>
+<button class="btn" onclick="persona.greet()">Ejecutar</button>
+    </section>
+
+    <h3 class="level">Nivell 2</h3>
+    <section class="mb">
+      <h4 class="subtitle">Exercici 4</h4>
+      <p>Funció de fletxa dins d'un loop: Crea una funció anomenada <code>printNumbers</code> que accepti un array de números i utilitzi un loop <code>for</code> per imprimir cada número a la consola utilitzant una funció de fletxa.</p>
+      <pre class="code"><code>const printNumbers = (numbers) => {
+  for (let i = 0; i < numbers.length; i++) {
+    const print = () => console.log(numbers[i]);
+    print();
+  }
+}</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>printNumbers([1, 2, 3]);</code></pre>
+      <button class="btn" onclick="printNumbers([1,2,3])">Ejecutar</button>
+    </section>
+
+    <h3 class="level">Nivell 3</h3>
+    <section class="mb">
+      <h4 class="subtitle">Exercici 5</h4>
+      <p>Funció de fletxa amb 'setTimeout': Crea una funció de fletxa que imprimeixi un missatge a la consola després d'esperar 3 segons.</p>
+      <pre class="code"><code>const delayedMessage = () => {
+  setTimeout(() => {
+    console.log("Aquest missatge apareix després de 3 segons.");
+  }, 3000);
+}</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>delayedMessage();</code></pre>
+      <button class="btn" onclick="delayedMessage()">Ejecutar</button>
+    </section>
+
+    <footer class="footer"><span>&copy; 2025 - Carlos Benito</span></footer>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>

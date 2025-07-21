@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercici 1.4: Rest & Spread operators</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="bg">
+  <main class="container">
+    <h1 class="title mb">Exercici 1.4: Rest & Spread operators</h1>
+
+    <h3 class="level">Nivell 1</h3>
+    <section class="mb">
+      <h4 class="subtitle">Exercici 1</h4>
+      <p>Operador Spread en Arrays: Crea dues arrays, <code>array1</code> i <code>array2</code>. Utilitza l'operador spread per a crear una tercera array que contingui tots els elements de <code>array1</code> i <code>array2</code>.</p>
+      <pre class="code"><code>const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+const array3 = [...array1, ...array2];
+console.log(array3);</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>console.log(array3);</code></pre>
+      <button class="btn" onclick="console.log([...array1, ...array2])">Ejecutar</button>
+    </section>
+
+    <section class="mb">
+      <h4 class="subtitle">Exercici 2</h4>
+      <p>Operador Rest en Funcions: Crea una funció <code>suma</code> que utilitzi l'operador rest per a acceptar un nombre indeterminat d'arguments i retornar la seva suma.</p>
+      <pre class="code"><code>const suma = (...numeros) => {
+  return numeros.reduce((acc, num) => acc + num, 0);
+}
+console.log(suma(1, 2, 3, 4, 5));</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>console.log(suma(1, 2, 3, 4, 5));</code></pre>
+      <button class="btn" onclick="console.log(suma(1,2,3,4,5))">Ejecutar</button>
+    </section>
+
+    <h3 class="level">Nivell 2</h3>
+    <section class="mb">
+      <h4 class="subtitle">Exercici 3</h4>
+      <p>Copiant objectes amb Spread: Crea un objecte <code>objecte1</code>. Després crea un segon objecte, <code>objecte2</code>, que sigui una còpia de <code>objecte1</code> utilitzant l'operador spread. Canvia una propietat de <code>objecte2</code> i comprova que <code>objecte1</code> no ha canviat.</p>
+      <pre class="code"><code>const objecte1 = { nom: 'Joan', edat: 30 };
+const objecte2 = { ...objecte1, edat: 31 };
+console.log(objecte1);
+console.log(objecte2);</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>console.log(objecte1);
+console.log(objecte2);</code></pre>
+      <button class="btn" onclick="console.log(objecte1);console.log(objecte2)">Ejecutar</button>
+    </section>
+
+    <section class="mb">
+      <h4 class="subtitle">Exercici 4</h4>
+      <p>Rest en Destructuring: Crea una array amb diversos elements. Utilitza destructuring i l'operador rest per a assignar els primers dos elements a variables, i després assignar la resta dels elements a una tercera variable.</p>
+      <pre class="code"><code>const array = [1, 2, 3, 4, 5, 6];
+const [primer, segon, ...resta] = array;
+console.log(primer, segon);
+console.log(resta);</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>console.log(primer, segon);
+console.log(resta);</code></pre>
+      <button class="btn" onclick="const array = [1,2,3,4,5,6]; const [primer, segon, ...resta] = array; console.log(primer, segon); console.log(resta);">Ejecutar</button>
+    </section>
+
+    <h3 class="level">Nivell 3</h3>
+    <section class="mb">
+      <h4 class="subtitle">Exercici 5</h4>
+      <p>Spread en Funcions: Crea una funció que accepti tres arguments. Després, crea una array amb tres elements i crida la funció utilitzant l'operador spread amb aquesta array.</p>
+      <pre class="code"><code>const numbers = (a, b, c) => {
+  console.log(`Arguments: ${a}, ${b}, ${c}`);
+}
+const arrayArguments = [10, 20, 30];
+numbers(...arrayArguments);</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>numbers(...arrayArguments);</code></pre>
+      <button class="btn" onclick="numbers(...arrayArguments)">Ejecutar</button>
+    </section>
+
+    <section class="mb">
+      <h4 class="subtitle">Exercici 6</h4>
+      <p>Fusionant Objectes amb Spread: Crea dos objectes amb propietats diferents. Utilitza l'operador spread per a fusionar aquests dos objectes en un de nou.</p>
+      <pre class="code"><code>const objecteA = { a: 1, b: 2 };
+const objecteB = { c: 3, d: 4 };
+const objecteFusionat = { ...objecteA, ...objecteB };
+console.log(objecteFusionat);</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>console.log(objecteFusionat);</code></pre>
+      <button class="btn" onclick="console.log(objecteFusionat)">Ejecutar</button>
+    </section>
+
+    <footer class="footer"><span>&copy; 2025 - Carlos Benito</span></footer>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>

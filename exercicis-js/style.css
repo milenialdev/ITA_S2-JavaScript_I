@@ -1,0 +1,101 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+/* Vanilla CSS reutilizable para todos los ejercicios */
+
+body.bg {
+  min-height: 100vh;
+  background: #f4f8fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Rubik', Arial, sans-serif;
+}
+
+.container {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px #0001;
+  padding: 2.5rem 2rem;
+  max-width: 700px;
+  width: 100%;
+  text-align: left;
+}
+
+.list {
+  text-align: center;
+  padding: 0;
+  margin-bottom: 2em;
+}
+
+.list-item {
+  list-style: none;
+  margin: 0.7em 0;
+}
+
+
+.title {
+  color: #1a237e;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.level {
+  color: #26327c;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.subtitle {
+  color: #1a237e;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.mb {
+  margin-bottom: 2em;
+}
+
+.code {
+  background: #f6f8fa;
+  border-radius: 8px;
+  padding: 1em;
+  overflow-x: auto;
+  margin-bottom: 0.5em;
+}
+
+.btn {
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.5em 1.2em;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin: 1em auto;
+}
+.btn:hover {
+  background: #1e40af;
+}
+
+.disclaimer {
+  color: #888;
+  font-size: 0.95em;
+  margin-top: 0.7em;
+  text-align: center;
+}
+
+
+
+.footer span {
+  display: inline-block;
+  border-top: 1px solid #111;
+  padding-top: 0.7em;
+  font-size: 0.95em;
+  color: #111;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercici 1.7: Promises & Async/Await</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="bg">
+  <main class="container">
+    <h1 class="title mb">Exercici 1.7: Promises & Async/Await</h1>
+
+    <h3 class="level">Nivell 1</h3>
+    <section class="mb">
+      <h4 class="subtitle">Exercici 1</h4>
+      <p>Creació d'una Promesa: Crea una promesa que es resolgui després de 2 segons i que retorni la cadena de text <code>'Hola, món'</code>.</p>
+      <pre class="code"><code>const promesa = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve('Hola, món');
+    }, 2000);
+  });
+}</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>promesa().then(resultat => console.log(resultat));</code></pre>
+      <button class="btn" onclick="promesa().then(resultat => console.log(resultat))">Ejecutar</button>
+    </section>
+
+    <section class="mb">
+      <h4 class="subtitle">Exercici 2</h4>
+      <p>Utilització d'una Promesa: Utilitza la promesa creada en l'exercici anterior. Crea un <code>.then</code> que imprimeixi el resultat a la consola.</p>
+      <pre class="code"><code>promesa().then((resultat) => {
+  console.log(resultat);
+});</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>promesa().then(resultat => console.log(resultat));</code></pre>
+      <button class="btn" onclick="promesa().then(resultat => console.log(resultat))">Ejecutar</button>
+    </section>
+
+    <section class="mb">
+      <h4 class="subtitle">Exercici 3</h4>
+      <p>Promesa amb reject: Crea una promesa que es resolgui després de 2 segons si l'input és igual a <code>'Hola'</code>, i que la rebutgi si l'input és qualsevol altra cosa.</p>
+      <pre class="code"><code>const promesaInput = (input) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (input === 'Hola') {
+        resolve('Entrada correcta: Hola');
+      } else {
+        reject('Entrada incorrecta, s\'esperava "Hola"');
+      }
+    }, 2000);
+  });
+}</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>promesaInput('Hola').then(console.log).catch(console.error);
+promesaInput('Adeu').then(console.log).catch(console.error);</code></pre>
+      <button class="btn" onclick="promesaInput('Hola').then(console.log).catch(console.error)">Ejecutar</button>
+    </section>
+
+    <section class="mb">
+      <h4 class="subtitle">Exercici 4</h4>
+      <p>Ús de async/await: Escriu una funció asíncrona que utilitzi la funció <code>await</code> per a esperar el resultat de la promesa creada a l'exercici 1, i que després imprimeixi aquest resultat a la consola.</p>
+      <pre class="code"><code>const asyncFunc = async () => {
+  const resultat = await promesa();
+  console.log(resultat);
+}
+asyncFunc();</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>asyncFunc();</code></pre>
+      <button class="btn" onclick="asyncFunc()">Ejecutar</button>
+    </section>
+
+    <h3 class="level">Nivell 2</h3>
+    <section class="mb">
+      <h4 class="subtitle">Exercici 5</h4>
+      <p>Gestió d'errors amb async/await: Modifica la funció de l'exercici 4 per a que capturi qualsevol possible error utilitzant un bloc <code>try/catch</code>.</p>
+      <pre class="code"><code>const asyncFuncWithErrors = async () => {
+  try {
+    const resultat = await promesa();
+    console.log(resultat);
+  } catch (error) {
+    console.error(error);
+  }
+}</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>asyncFuncWithErrors();</code></pre>
+      <button class="btn" onclick="asyncFuncWithErrors()">Ejecutar</button>
+    </section>
+
+    <h3 class="level">Nivell 3</h3>
+    <section class="mb">
+      <h4 class="subtitle">Exercici 6</h4>
+      <p>Promise.all: Crea dues promeses que es resolguin després de 2 i 3 segons, respectivament. Utilitza <code>Promise.all</code> per a esperar que ambdues promeses es resolguin, i imprimeix els resultats a la consola.</p>
+      <pre class="code"><code>const promesa1 = new Promise(resolve => setTimeout(() => resolve('Promesa 1 resolta'), 2000));
+const promesa2 = new Promise(resolve => setTimeout(() => resolve('Promesa 2 resolta'), 3000));
+Promise.all([promesa1, promesa2]).then(resultats => console.log(resultats));</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>Promise.all([promesa1, promesa2]).then(resultats => console.log(resultats));</code></pre>
+      <button class="btn" onclick="const p1=new Promise(r=>setTimeout(()=>r('Promesa 1 resolta'),2000));const p2=new Promise(r=>setTimeout(()=>r('Promesa 2 resolta'),3000));Promise.all([p1,p2]).then(resultats=>console.log(resultats))">Ejecutar</button>
+    </section>
+
+    <footer class="footer"><span>&copy; 2025 - Carlos Benito</span></footer>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>

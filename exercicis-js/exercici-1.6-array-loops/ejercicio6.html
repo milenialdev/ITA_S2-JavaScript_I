@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercici 1.6: Array Loops</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="bg">
+  <main class="container">
+    <h1 class="title mb">Exercici 1.6: Array Loops</h1>
+
+    <h3 class="level">Nivell 1</h3>
+    <section class="mb">
+      <h4 class="subtitle">Exercici 1</h4>
+      <p>forEach: Teniu una array de noms. Utilitza <code>forEach</code> per a imprimir cada nom a la consola: <code>let noms = ['Anna', 'Bernat', 'Clara']</code>.</p>
+      <pre class="code"><code>let noms = ['Anna', 'Bernat', 'Clara'];
+noms.forEach(nom => console.log(nom));</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>noms.forEach(nom => console.log(nom));</code></pre>
+      <button class="btn" onclick="['Anna','Bernat','Clara'].forEach(nom => console.log(nom))">Ejecutar</button>
+    </section>
+
+    <section class="mb">
+      <h4 class="subtitle">Exercici 2</h4>
+      <p>for-of: Teniu una array de noms. Utilitza un bucle <code>for-of</code> per a imprimir cada nom a la consola: <code>let noms = ['Anna', 'Bernat', 'Clara']</code>.</p>
+      <pre class="code"><code>for (let nom of noms) {
+  console.log(nom);
+}</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>for (let nom of noms) {
+  console.log(nom);
+}</code></pre>
+      <button class="btn" onclick="for(let nom of ['Anna','Bernat','Clara']){console.log(nom)}">Ejecutar</button>
+    </section>
+
+    <section class="mb">
+      <h4 class="subtitle">Exercici 3</h4>
+      <p>filter: Teniu una array de números. Utilitza <code>filter</code> per a crear una nova array que només contingui els números parells: <code>let numeros = [1, 2, 3, 4, 5, 6]</code>.</p>
+      <pre class="code"><code>let numeros = [1, 2, 3, 4, 5, 6];
+const numerosParells = numeros.filter(num => num % 2 === 0);
+console.log(numerosParells);</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>console.log(numerosParells);</code></pre>
+      <button class="btn" onclick="console.log([1,2,3,4,5,6].filter(num => num % 2 === 0))">Ejecutar</button>
+    </section>
+
+    <h3 class="level">Nivell 2</h3>
+    <section class="mb">
+      <h4 class="subtitle">Exercici 4</h4>
+      <p>for-in: Teniu un objecte amb parells clau-valor: <code>let obj = {'nom': 'Ona', 'edat': 25, 'ciutat': 'Barcelona'}</code>. Utilitza un bucle <code>for-in</code> per a imprimir a la consola cada clau i el seu valor corresponent.</p>
+      <pre class="code"><code>let obj = { nom: 'Ona', edat: 25, ciutat: 'Barcelona' };
+for (let key in obj) {
+  console.log(`${key}: ${obj[key]}`);
+}</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>for (let key in obj) {
+  console.log(`${key}: ${obj[key]}`);
+}</code></pre>
+      <button class="btn" onclick="let obj={nom:'Ona',edat:25,ciutat:'Barcelona'};for(let key in obj){console.log(`${key}: ${obj[key]}`)}">Ejecutar</button>
+    </section>
+
+    <section class="mb">
+      <h4 class="subtitle">Exercici 5</h4>
+      <p>for-of amb break: Teniu una array de números. Utilitza un bucle <code>for-of</code> per a imprimir a la consola els números fins a trobar el número 5, llavors atura el bucle: <code>let numeros = [1, 2, 3, 4, 5, 6]</code>.</p>
+      <pre class="code"><code>for (let num of numeros) {
+  console.log(num);
+  if (num === 5) {
+    break;
+  }
+}</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>for (let num of numeros) {
+  console.log(num);
+  if (num === 5) break;
+}</code></pre>
+      <button class="btn" onclick="for(let num of [1,2,3,4,5,6]){console.log(num);if(num===5)break}">Ejecutar</button>
+    </section>
+
+    <h3 class="level">Nivell 3</h3>
+    <section class="mb">
+      <h4 class="subtitle">Exercici 6</h4>
+      <p>for-of amb index: Utilitza un bucle <code>for-of</code> per a imprimir a la consola cada element de l'array i la seva posició (index): <code>let noms = ['Anna', 'Bernat', 'Clara']</code>.</p>
+      <pre class="code"><code>for (let [index, nom] of noms.entries()) {
+  console.log(`Index: ${index}, Nom: ${nom}`);
+}</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>for (let [index, nom] of noms.entries()) {
+  console.log(`Index: ${index}, Nom: ${nom}`);
+}</code></pre>
+      <button class="btn" onclick="['Anna','Bernat','Clara'].forEach((nom,i)=>console.log(`Index: ${i}, Nom: ${nom}`))">Ejecutar</button>
+    </section>
+
+    <footer class="footer"><span>&copy; 2025 - Carlos Benito</span></footer>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>

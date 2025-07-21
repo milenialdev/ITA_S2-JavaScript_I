@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercici 1.5: Array Transformations</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="bg">
+  <main class="container">
+    <h1 class="title mb">Exercici 1.5: Array Transformations</h1>
+
+    <h3 class="level">Nivell 1</h3>
+    <section class="mb">
+      <h4 class="subtitle">Exercici 1</h4>
+      <p>Map: Teniu un array de números <code>[1, 2, 3, 4]</code>. Crea una nova array que contingui el quadrat de cada número.</p>
+      <pre class="code"><code>const numeros = [1, 2, 3, 4];
+const quadrats = numeros.map(num => num * num);
+console.log(quadrats);</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>console.log(quadrats);</code></pre>
+      <button class="btn" onclick="console.log([1,2,3,4].map(num => num * num))">Ejecutar</button>
+    </section>
+
+    <section class="mb">
+      <h4 class="subtitle">Exercici 2</h4>
+      <p>Filter: Teniu una array de números <code>[1, 2, 3, 4]</code>. Crea una nova array que només contingui els números parells.</p>
+      <pre class="code"><code>const numerosArray = [1, 2, 3, 4];
+const numerosParells = numerosArray.filter(num => num % 2 === 0);
+console.log(numerosParells);</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>console.log(numerosParells);</code></pre>
+      <button class="btn" onclick="console.log([1,2,3,4].filter(num => num % 2 === 0))">Ejecutar</button>
+    </section>
+
+    <section class="mb">
+      <h4 class="subtitle">Exercici 3</h4>
+      <p>Find: Teniu una array de números <code>[1, 10, 8, 11]</code>. Utilitza la funció find per a trobar el primer número que és major a 10.</p>
+      <pre class="code"><code>const numerosFind = [1, 10, 8, 11];
+const majorQue10 = numerosFind.find(num => num > 10);
+console.log(majorQue10);</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>console.log(majorQue10);</code></pre>
+      <button class="btn" onclick="console.log([1,10,8,11].find(num => num > 10))">Ejecutar</button>
+    </section>
+
+    <section class="mb">
+      <h4 class="subtitle">Exercici 4</h4>
+      <p>Reduce: Teniu una array de números <code>[13, 7, 8, 21]</code>. Fes servir la funció reduce per a calcular la suma total dels números.</p>
+      <pre class="code"><code>const numerosReduce = [13, 7, 8, 21];
+const sumaTotal = numerosReduce.reduce((acc, num) => acc + num, 0);
+console.log(sumaTotal);</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>console.log(sumaTotal);</code></pre>
+      <button class="btn" onclick="console.log([13,7,8,21].reduce((acc, num) => acc + num, 0))">Ejecutar</button>
+    </section>
+
+    <h3 class="level">Nivell 2</h3>
+    <section class="mb">
+      <h4 class="subtitle">Exercici 5</h4>
+      <p>Donat un array <code>[1, 3, 7, 10, 15, 17, 11, 5, 8, 12, 9]</code>, crea una funció en una sola línia que filtra els nombres majors o iguals a 10, els multiplica per 2 i retorna la suma.</p>
+      <pre class="code"><code>const numerosArray2 = [1, 3, 7, 10, 15, 17, 11, 5, 8, 12, 9];
+const resultat = numerosArray2
+    .filter(num => num >= 10)
+    .map(num => num * 2)
+    .reduce((acc, num) => acc + num, 0);
+console.log(resultat);</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>console.log(resultat);</code></pre>
+      <button class="btn" onclick="console.log([1,3,7,10,15,17,11,5,8,12,9].filter(num => num >= 10).map(num => num * 2).reduce((acc, num) => acc + num, 0))">Ejecutar</button>
+    </section>
+
+    <h3 class="level">Nivell 3</h3>
+    <section class="mb">
+      <h4 class="subtitle">Exercici 6</h4>
+      <p>Every / Some: Usa <code>every</code> i <code>some</code> per a determinar si tots o alguns dels elements de l'array <code>[11, 12, 13, 14]</code> són majors que 10, respectivament.</p>
+      <pre class="code"><code>const numerosArray3 = [11, 12, 13, 14];
+const totsMajorsQue10 = numerosArray3.every(num => num > 10);
+const algunsMajorsQue10 = numerosArray3.some(num => num > 10);
+console.log(totsMajorsQue10);
+console.log(algunsMajorsQue10);</code></pre>
+      <div><strong>Ejemplo de llamada:</strong></div>
+      <pre class="code"><code>console.log(totsMajorsQue10);
+console.log(algunsMajorsQue10);</code></pre>
+      <button class="btn" onclick="const arr=[11,12,13,14];console.log(arr.every(num=>num>10));console.log(arr.some(num=>num>10))">Ejecutar</button>
+    </section>
+
+    <footer class="footer"><span>&copy; 2025 - Carlos Benito</span></footer>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
