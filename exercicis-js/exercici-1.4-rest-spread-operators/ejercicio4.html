@@ -12,7 +12,7 @@
     <h3 class="level">Nivell 1</h3>
     <section class="mb">
       <h4 class="subtitle">Exercici 1</h4>
-      <p>Operador Spread en Arrays: Crea dues arrays, <code>array1</code> i <code>array2</code>. Utilitza l'operador spread per a crear una tercera array que contingui tots els elements de <code>array1</code> i <code>array2</code>.</p>
+      <p>Operador Spread en Arrays: Crea dues arrays, <code class="codebg">array1</code> i <code class="codebg">array2</code>. Utilitza l'operador spread per a crear una tercera array que contingui tots els elements de <code class="codebg">array1</code> i <code class="codebg">array2</code>.</p>
       <pre class="code"><code>const array1 = [1, 2, 3];
 const array2 = [4, 5, 6];
 const array3 = [...array1, ...array2];
@@ -24,7 +24,7 @@ console.log(array3);</code></pre>
 
     <section class="mb">
       <h4 class="subtitle">Exercici 2</h4>
-      <p>Operador Rest en Funcions: Crea una funció <code>suma</code> que utilitzi l'operador rest per a acceptar un nombre indeterminat d'arguments i retornar la seva suma.</p>
+      <p>Operador Rest en Funcions: Crea una funció <code class="codebg">suma</code> que utilitzi l'operador rest per a acceptar un nombre indeterminat d'arguments i retornar la seva suma.</p>
       <pre class="code"><code>const suma = (...numeros) => {
   return numeros.reduce((acc, num) => acc + num, 0);
 }
@@ -37,7 +37,7 @@ console.log(suma(1, 2, 3, 4, 5));</code></pre>
     <h3 class="level">Nivell 2</h3>
     <section class="mb">
       <h4 class="subtitle">Exercici 3</h4>
-      <p>Copiant objectes amb Spread: Crea un objecte <code>objecte1</code>. Després crea un segon objecte, <code>objecte2</code>, que sigui una còpia de <code>objecte1</code> utilitzant l'operador spread. Canvia una propietat de <code>objecte2</code> i comprova que <code>objecte1</code> no ha canviat.</p>
+      <p>Copiant objectes amb Spread: Crea un objecte <code class="codebg">objecte1</code>. Després crea un segon objecte, <code class="codebg">objecte2</code>, que sigui una còpia de <code class="codebg">objecte1</code> utilitzant l'operador spread. Canvia una propietat de <code class="codebg">objecte2</code> i comprova que <code class="codebg">objecte1</code> no ha canviat.</p>
       <pre class="code"><code>const objecte1 = { nom: 'Joan', edat: 30 };
 const objecte2 = { ...objecte1, edat: 31 };
 console.log(objecte1);

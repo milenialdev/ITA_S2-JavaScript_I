@@ -12,7 +12,7 @@
     <h3 class="level">Nivell 1</h3>
     <section class="mb">
       <h4 class="subtitle">Exercici 1</h4>
-      <p>Operador ternari bàsic: Escriu una funció <code>potConduir</code> que accepti l'edat com a paràmetre i utilitzi l'operador ternari per determinar si l'usuari pot conduir. Si l'edat és 18 o més, ha de retornar 'Pots conduir'. Si no, ha de retornar 'No pots conduir'.</p>
+      <p>Operador ternari bàsic: Escriu una funció <code class="codebg">potConduir</code> que accepti l'edat com a paràmetre i utilitzi l'operador ternari per determinar si l'usuari pot conduir. Si l'edat és 18 o més, ha de retornar 'Pots conduir'. Si no, ha de retornar 'No pots conduir'.</p>
       <pre class="code"><code>const potConduir = (number) => {
   const edat = number;
   return edat >= 18 ? console.log('Pots conduir') : console.log('No pots conduir');
@@ -24,7 +24,7 @@
 
     <section class="mb">
       <h4 class="subtitle">Exercici 2</h4>
-      <p>Ús amb operadors de comparació: Escriu una expressió que utilitzi l'operador ternari per determinar quin dels dos nombres donats (<code>num1</code> i <code>num2</code>) és més gran. Si <code>num1</code> és més gran, retorna 'num1 és més gran'. Si no, retorna 'num2 és més gran'.</p>
+      <p>Ús amb operadors de comparació: Escriu una expressió que utilitzi l'operador ternari per determinar quin dels dos nombres donats (<code class="codebg">num1</code> i <code class="codebg">num2</code>) és més gran. Si <code class="codebg">num1</code> és més gran, retorna 'num1 és més gran'. Si no, retorna 'num2 és més gran'.</p>
       <pre class="code"><code>const greaterNumber = (num1, num2) => {
   return num1 > num2 ? console.log(`${num1} és més gran`) : console.log(`${num2} és més gran`);
 }</code></pre>
@@ -36,7 +36,7 @@
     <h3 class="level">Nivell 2</h3>
     <section class="mb">
       <h4 class="subtitle">Exercici 3</h4>
-      <p>Ús enllaçat d'operadors ternaris: Escriu una expressió que utilitzi enllaços d'operadors ternaris per determinar si un número és positiu, negatiu o zero. Operador ternari amb funcions: Crea una funció <code>trobarMaxim</code> que accepti tres paràmetres (<code>a</code>, <code>b</code>, <code>c</code>) i utilitzi l'operador ternari per determinar el valor màxim.</p>
+      <p>Ús enllaçat d'operadors ternaris: Escriu una expressió que utilitzi enllaços d'operadors ternaris per determinar si un número és positiu, negatiu o zero. Operador ternari amb funcions: Crea una funció <code class="codebg">trobarMaxim</code> que accepti tres paràmetres (<code class="codebg">a, b, c</code>) i utilitzi l'operador ternari per determinar el valor màxim.</p>
       <pre class="code"><code>const trobarMaxim = (a, b, c) =>
   a > b
     ? (a > c ? a : c)
@@ -49,7 +49,7 @@
     <h3 class="level">Nivell 3</h3>
     <section class="mb">
       <h4 class="subtitle">Exercici 4</h4>
-      <p>Operador ternari dins un bucle: Escriu una funció <code>parOImpar</code> que accepti un array de números i utilitzi un bucle per a recórrer l'array. Dins del bucle, utilitza l'operador ternari per a determinar si cada número és parell o imparell.</p>
+      <p>Operador ternari dins un bucle: Escriu una funció <code class="codebg">parOImpar</code> que accepti un array de números i utilitzi un bucle per a recórrer l'array. Dins del bucle, utilitza l'operador ternari per a determinar si cada número és parell o imparell.</p>
       <pre class="code"><code>const parOImpar = (array) => {
   array.forEach(num => {
     const result = num % 2 === 0 ? `${num} és parell` : `${num} és imparell`;

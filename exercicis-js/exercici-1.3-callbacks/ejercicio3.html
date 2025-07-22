@@ -12,7 +12,7 @@
     <h3 class="level">Nivell 1</h3>
     <section class="mb">
       <h4 class="subtitle">Exercici 1</h4>
-      <p>Callback bàsic: Escriu una funció anomenada <code>processar</code> que accepti dos paràmetres: un nombre i una funció de callback. La funció <code>processar</code> ha d'invocar la funció de callback, passant el nombre com a paràmetre.</p>
+      <p>Callback bàsic: Escriu una funció anomenada <code class="codebg">processar</code> que accepti dos paràmetres: un nombre i una funció de callback. La funció <code class="codebg">processar</code> ha d'invocar la funció de callback, passant el nombre com a paràmetre.</p>
       <pre class="code"><code>const processar = (numero, callback) => {
   callback(numero);
 }
@@ -27,7 +27,7 @@ const duplicarNumero = (numero) => {
 
     <section class="mb">
       <h4 class="subtitle">Exercici 2</h4>
-      <p>Callbacks amb operacions matemàtiques: Escriu una funció <code>calculadora</code> que accepti tres paràmetres: dos nombres i una funció de callback. La funció <code>calculadora</code> ha d'invocar la funció de callback amb els dos nombres com a paràmetres. Després, crida <code>calculadora</code> amb una funció que faci la suma dels dos nombres.</p>
+      <p>Callbacks amb operacions matemàtiques: Escriu una funció <code class="codebg">calculadora</code> que accepti tres paràmetres: dos nombres i una funció de callback. La funció <code class="codebg">calculadora</code> ha d'invocar la funció de callback amb els dos nombres com a paràmetres. Després, crida <code class="codebg">calculadora</code> amb una funció que faci la suma dels dos nombres.</p>
       <pre class="code"><code>const calculadora = (num1, num2, callback) =>{
   callback(num1, num2);
 }
@@ -43,7 +43,7 @@ const suma = (num1, num2) => {
     <h3 class="level">Nivell 2</h3>
     <section class="mb">
       <h4 class="subtitle">Exercici 3</h4>
-      <p>Ús de callbacks en funcions asíncrones: Escriu una funció <code>esperarISaludar</code> que accepti dos paràmetres: un nom i una funció de callback. La funció ha d'esperar 2 segons i llavors invocar la funció de callback, passant el nom com a paràmetre.</p>
+      <p>Ús de callbacks en funcions asíncrones: Escriu una funció <code class="codebg">esperarISaludar</code> que accepti dos paràmetres: un nom i una funció de callback. La funció ha d'esperar 2 segons i llavors invocar la funció de callback, passant el nom com a paràmetre.</p>
       <pre class="code"><code>const esperarISaludar = (nom, callback) => {
   setTimeout(() => {
     callback(nom);
@@ -59,7 +59,7 @@ const saludar = (nom) => {
 
     <section class="mb">
       <h4 class="subtitle">Exercici 4</h4>
-      <p>Callbacks amb arrays: Escriu una funció <code>processarElements</code> que accepti dos paràmetres: un array i una funció de callback. La funció <code>processarElements</code> ha d'invocar la funció de callback per cada element de l'array.</p>
+      <p>Callbacks amb arrays: Escriu una funció <code class="codebg">processarElements</code> que accepti dos paràmetres: un array i una funció de callback. La funció <code class="codebg">processarElements</code> ha d'invocar la funció de callback per cada element de l'array.</p>
       <pre class="code"><code>const processarElements = (array, callback) => {
   array.forEach(element => {
     callback(element);
@@ -76,7 +76,7 @@ const mostrarElement = (element) => {
     <h3 class="level">Nivell 3</h3>
     <section class="mb">
       <h4 class="subtitle">Exercici 5</h4>
-      <p>Escriu una funció <code>processarCadena</code> que accepti dos paràmetres: una cadena de caràcters i una funció de callback. La funció <code>processarCadena</code> ha de convertir la cadena a majúscules i llavors invocar la funció de callback amb la cadena transformada.</p>
+      <p>Escriu una funció <code class="codebg">processarCadena</code> que accepti dos paràmetres: una cadena de caràcters i una funció de callback. La funció <code class="codebg">processarCadena</code> ha de convertir la cadena a majúscules i llavors invocar la funció de callback amb la cadena transformada.</p>
       <pre class="code"><code>const processarCadena = (cadena, callback) => {
   const cadenaTransformada = cadena.toUpperCase();
   callback(cadenaTransformada);

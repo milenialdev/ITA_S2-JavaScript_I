@@ -12,7 +12,7 @@
     <h3 class="level">Nivell 1</h3>
     <section class="mb">
       <h4 class="subtitle">Exercici 1</h4>
-      <p>Conversió de funcions: Tens una funció <code>add</code> que accepta dos paràmetres i retorna la seva suma. Converteix-la en una funció de fletxa. Per exemple: <code>function add(a, b) {'{'}return a + b;{'}'}</code></p>
+      <p>Conversió de funcions: Tens una funció <code class="codebg">add</code> que accepta dos paràmetres i retorna la seva suma. Converteix-la en una funció de fletxa. Per exemple: <code class="codebg">function add(a, b) {'{'}return a + b;{'}'}</code></p>
       <pre class="code"><code>const add = (a, b) => a + b;</code></pre>
       <div><strong>Ejemplo de llamada:</strong></div>
       <pre class="code"><code>console.log(add(2, 3));</code></pre>
@@ -21,7 +21,7 @@
 
     <section class="mb">
       <h4 class="subtitle">Exercici 2</h4>
-      <p>Funció de fletxa sense paràmetres: Crea una funció de fletxa anomenada <code>randomNumber</code> que no necessiti paràmetres i que retorni un número aleatori entre 0 i 100.</p>
+      <p>Funció de fletxa sense paràmetres: Crea una funció de fletxa anomenada <code class="codebg">randomNumber</code> que no necessiti paràmetres i que retorni un número aleatori entre 0 i 100.</p>
       <pre class="code"><code>const randomNumber = () => Math.floor(Math.random() * 101);</code></pre>
       <div><strong>Ejemplo de llamada:</strong></div>
       <pre class="code"><code>console.log(randomNumber());</code></pre>
@@ -30,7 +30,7 @@
 
     <section class="mb">
       <h4 class="subtitle">Exercici 3</h4>
-      <p>Ús de 'this' en les funcions de fletxa: Crea una classe <code>Person</code> que tingui una propietat <code>name</code> i una funció <code>greet</code> que utilitzi una funció de fletxa. La funció ha d'imprimir una salutació que inclogui el nom de la persona. Per exemple: <code>console.log(Hola, ${'{'}this.name{'}'});</code></p>
+      <p>Ús de 'this' en les funcions de fletxa: Crea una classe <code class="codebg">Person</code> que tingui una propietat <code class="codebg">name</code> i una funció <code class="codebg">greet</code> que utilitzi una funció de fletxa. La funció ha d'imprimir una salutació que inclogui el nom de la persona. Per exemple: <code class="codebg">console.log(Hola, ${'{'}this.name{'}'});</code></p>
       <pre class="code"><code>class Person {
   constructor(name) {
     this.name = name;
@@ -48,7 +48,7 @@ persona.greet();</code></pre>
     <h3 class="level">Nivell 2</h3>
     <section class="mb">
       <h4 class="subtitle">Exercici 4</h4>
-      <p>Funció de fletxa dins d'un loop: Crea una funció anomenada <code>printNumbers</code> que accepti un array de números i utilitzi un loop <code>for</code> per imprimir cada número a la consola utilitzant una funció de fletxa.</p>
+      <p>Funció de fletxa dins d'un loop: Crea una funció anomenada <code class="codebg">printNumbers</code> que accepti un array de números i utilitzi un loop <code class="codebg">for</code> per imprimir cada número a la consola utilitzant una funció de fletxa.</p>
       <pre class="code"><code>const printNumbers = (numbers) => {
   for (let i = 0; i < numbers.length; i++) {
     const print = () => console.log(numbers[i]);
