@@ -91,10 +91,9 @@ const cleanCart = () =>  {
 
 // Exercise 3
 const calculateTotal = () =>  {
-    // Calculate total price of the cart using the "cartList" array
     let count = 0
-
-
+    cart.forEach(item => count += (item.price*item.quantity))
+    return count
 }
 
 // Exercise 4
