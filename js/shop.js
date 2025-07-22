@@ -92,13 +92,25 @@ const cleanCart = () =>  {
 // Exercise 3
 const calculateTotal = () =>  {
     let count = 0
-    cart.forEach(item => count += (item.price*item.quantity))
-    return count
+    cart.forEach(item => {
+        item.subtotalWithDiscount != undefined ? count += item.subtotalWithDiscount : count += item.price*item.quantity
+    })
+    return count;
 }
+
 
 // Exercise 4
 const applyPromotionsCart = () =>  {
     // Apply promotions to each item in the array "cart"
+    cart.forEach(item =>{
+        if(item.id === 1){
+            item.quantity >= 3 ? item.subtotalWithDiscount = item.quantity * (item.price * 0.8) : delete item.subtotalWithDiscount
+        } else if (item.id === 3){
+            item.quantity >= 10 ? item.subtotalWithDiscount = item.quantity * (item.price * 0.7) : delete item.subtotalWithDiscount
+        } else {
+            delete item.subtotalWithDiscount;
+        }
+    } )
 }
 
 // Exercise 5
