@@ -77,17 +77,24 @@ const total = 0;
 // Exercise 1
 const buy = (id) => {
     // 1. Loop for to the array products to get the item to add to cart
+    const findProduct = products.find(product => product.id === id);
+    //validation in case the item doesn't exist (the activity does not expect it)
+    const emptyCart = cart.find(item => item.id === id)
     // 2. Add found product to the cart array
+    !emptyCart ? cart.push({...findProduct, quantity: 1}) : emptyCart.quantity++;
 }
 
 // Exercise 2
 const cleanCart = () =>  {
-
+    cart.length = 0;
 }
 
 // Exercise 3
 const calculateTotal = () =>  {
     // Calculate total price of the cart using the "cartList" array
+    let count = 0
+
+
 }
 
 // Exercise 4
