@@ -1,74 +1,66 @@
-# 🧠 ITA_S2-JavaScript_I
+# Sprint 2 IT Academy | Shop
 
-Repositori del **Sprint 2 de JavaScript** del curs de desenvolupament Front-End a **IT Academy**.
+## Introduction
 
-Aquest repositori conté:
+A company in the e-commerce sector has asked us for a web application that allows them to offer the purchase of their products through the internet.
 
-- 🧪 Un conjunt complet d’exercicis pràctics sobre funcions modernes de JavaScript.
-- 🛒 L’estructura inicial per a una demo funcional d’una aplicació e-commerce (encara no implementada).
+You will be in charge of setting up an initial demo version of the application for the client: management of the shopping cart and the application of the promotions on the final price. You have 1 week to finish this part of sprint (2.2).
 
----
+<br>
 
-## 📁 Estructura del repositori
+## Requirements
 
-```
-ITA_S2-JavaScript_I/
-├── exercicis-js/                      # Exercicis dividits per tema
-│   ├── exercici-1.1-arrow-functions/
-│   ├── exercici-1.2-operador-ternari/
-│   ├── exercici-1.3-callbacks/
-│   ├── exercici-1.4-rest-spread-operators/
-│   ├── exercici-1.5-array-transformations/
-│   ├── exercici-1.6-array-loops/
-│   └── exercici-1.7-promises-async-await/
-│       └── index.js
-│
-├── ecommerce-demo/                    # Carpeta buida (es prepararà més endavant)
-│   └── .gitkeep
-│
-├── .gitignore
-└── README.md
+
+1. Clone this repo
+```bash
+$ git clone https://github.com/IT-Academy-BCN/starter-code-frontend-shop
 ```
 
----
+2. Unlink your repo from the itacademy repository.
+(Explanation: You have to upload the code to your GitHub repository, not to the IT Academy. That's why you have to unlink your project from IT Academy GitHub with the following command)
 
-## ✅ Exercicis JavaScript inclosos
+```bash
+$ git remote rm origin
+```
 
-Cada carpeta dins de `exercicis-js/` conté un `index.js` amb els exercicis corresponents:
+3. Link your repo to the repository you have to create in your github account
+(Explanation: Now your project is not linked to any remote repository. In order to upload your code, you have to link your project to the new repository created on github.com using the following command)
 
-1. **Exercici 1.1:** Funcions de fletxa (`=>`)
-2. **Exercici 1.2:** Operador ternari (`? :`)
-3. **Exercici 1.3:** Callbacks
-4. **Exercici 1.4:** Operadors Rest & Spread (`...`)
-5. **Exercici 1.5:** Transformacions d'arrays (`map`, `filter`, `reduce`, etc.)
-6. **Exercici 1.6:** Bucles i recorreguts (`forEach`, `for-of`, etc.)
-7. **Exercici 1.7:** Promeses i async/await
+```bash
+$ git remote add origin <your repo name!>
+```
 
----
+<br>
 
-## 🛠️ Tecnologies
+## Submission
 
-- JavaScript ES6+
-- HTML5 (en la demo)
-- CSS3 (en la demo)
-- Eines suggerides: `live-server`, `eslint`, `npm`
+1. It is necessary to upload each exercise in a separate commit. The commit name must clearly indicate its content.
 
----
+2. Upload the link to your GitHub repository to the virtual campus, enabling your mentor to review and provide feedback.
 
-## 🔜 E-commerce Demo
 
-La carpeta `ecommerce-demo/` està preparada per implementar una botiga online amb:
 
-- Gestió del carret de compra
-- Aplicació de promocions
-- Validació de formulari de checkout
-- Maquetació bàsica
+<br>
 
-Aquesta part s'implementarà a partir del **Dia 5 del Sprint**.
+## Introduction
 
----
+The statement of the exercise is available on the virtual campus.
 
-## 👤 Autor
+<br>
 
-**Carlos / milenialdev**  
-[github.com/milenialdev](https://github.com/milenialdev)
+
+## Instructions
+
+You have the following indications from the frontend manager:
+
+- You have prepared the base of the project on which you will work: https://github.com/IT-Academy-BCN/starter-code-frontend-shop
+
+- The base of the project on which you will work has already created all the files, and an initial version of the interface, so you can focus on programming the logic.
+
+- As at the moment we don't consume data from a server using an API, we will work with hardcoded data in the application. For the moment we will implement the logic using a small group of 9 products divided in 3 sections.
+
+- Except for the last level, showing the result of the functions by console is enough.
+
+- The logic to implement will be placed in the src/grocery.js and src/checkout.js files. You will see that the built in functions have already been created for you to implement them.
+
+- It is forbidden to copy the code, since this way you don't learn anything. Furthermore, as you can see, the second release of sprint 5 is a mini-level test with the mentor, in which you will have to demonstrate live that you have acquired the javascript concepts. Don't worry, if you work on the releases you won't have any problems.
