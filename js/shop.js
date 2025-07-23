@@ -101,21 +101,32 @@ const calculateTotal = () =>  {
 
 // Exercise 4
 const applyPromotionsCart = () =>  {
-    // Apply promotions to each item in the array "cart"
-    cart.forEach(item =>{
-        if(item.id === 1){
-            item.quantity >= 3 ? item.subtotalWithDiscount = item.quantity * (item.price * 0.8) : delete item.subtotalWithDiscount
-        } else if (item.id === 3){
-            item.quantity >= 10 ? item.subtotalWithDiscount = item.quantity * (item.price * 0.7) : delete item.subtotalWithDiscount
+    cart.forEach(item => {
+        const product = products.find(p => p.id === item.id);
+        const discount = product.offer ? product.offer.percent : 0;
+        if (item.id === 1) {
+            if (item.quantity >= 3) {
+                item.subtotalWithDiscount = item.quantity * (item.price - (item.price * (discount / 100)));
+            } else {
+                delete item.subtotalWithDiscount;
+            }
+        } else if (item.id === 3) {
+            if (item.quantity >= 10) {
+                item.subtotalWithDiscount = item.quantity * (item.price - (item.price * (discount / 100)));
+            } else {
+                delete item.subtotalWithDiscount;
+            }
         } else {
             delete item.subtotalWithDiscount;
         }
-    } )
+    });
 }
 
 // Exercise 5
 const printCart = () => {
     // Fill the shopping cart modal manipulating the shopping cart dom
+    
+
 }
 
 
