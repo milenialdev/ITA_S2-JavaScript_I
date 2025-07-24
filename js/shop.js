@@ -123,12 +123,40 @@ const applyPromotionsCart = () =>  {
 }
 
 // Exercise 5
+
 const printCart = () => {
-    // Fill the shopping cart modal manipulating the shopping cart dom
-    
+    const cartList = document.getElementById("cart_list");
+    cartList.innerHTML = "";
 
+    cart.forEach(item => {
+        const row = document.createElement("tr");
+        const nameCell = document.createElement("th");
+        
+        nameCell.scope = "row";
+        nameCell.textContent = item.name;
+
+        const priceCell = document.createElement("td");
+        priceCell.textContent = `$${item.price}`;
+
+        const quantityCell = document.createElement("td");
+        quantityCell.textContent = item.quantity;
+
+        const totalCell = document.createElement("td");
+        const total = item.subtotalWithDiscount !== undefined
+            ? item.subtotalWithDiscount
+            : item.price * item.quantity;
+        totalCell.textContent = `$${total.toFixed(2)}`;
+
+        row.appendChild(nameCell);
+        row.appendChild(priceCell);
+        row.appendChild(quantityCell);
+        row.appendChild(totalCell);
+
+        cartList.appendChild(row);
+    });
+
+    document.getElementById("total_price").textContent = calculateTotal().toFixed(2);
 }
-
 
 // ** Nivell II **
 
