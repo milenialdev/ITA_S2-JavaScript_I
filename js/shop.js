@@ -1,22 +1,22 @@
 // Activar botones al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
-    // Botones "Add to cart"
     document.querySelectorAll('.add-to-cart').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const id = parseInt(btn.getAttribute('data-product-id'));
             buy(id);
             applyPromotionsCart();
             printCart();
+            updateCartCount();
         });
     });
 
-    // Botón "Clean Cart"
     const cleanBtn = document.getElementById('clean-cart');
     if (cleanBtn) {
         cleanBtn.addEventListener('click', () => {
             cleanCart();
             applyPromotionsCart();
             printCart();
+            updateCartCount();
         });
     }
 });
@@ -96,6 +96,14 @@ const products = [
 // Improved version of cartList. Cart is an array of products (objects), but each one has a quantity field to define its quantity, so these products are not repeated.
 const cart = [];
 
+function updateCartCount() {
+    const countSpan = document.getElementById('count_product');
+    if (countSpan) {
+        let totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+        countSpan.textContent = totalItems;
+    }
+}
+
 const total = 0;
 
 // Exercise 1
@@ -152,45 +160,56 @@ const printCart = () => {
     const cartList = document.getElementById("cart_list");
     cartList.innerHTML = "";
 
-    cart.forEach(item => {
+    if (cart.length === 0) {
+        // Mostrar mensaje de carrito vacío
         const row = document.createElement("tr");
-        const nameCell = document.createElement("th");
-        nameCell.scope = "row";
-        nameCell.textContent = item.name;
-
-        const priceCell = document.createElement("td");
-        priceCell.textContent = `$${item.price}`;
-
-        const quantityCell = document.createElement("td");
-        quantityCell.textContent = item.quantity;
-
-        const totalCell = document.createElement("td");
-        const total = item.subtotalWithDiscount !== undefined
-            ? item.subtotalWithDiscount
-            : item.price * item.quantity;
-        totalCell.textContent = `$${total.toFixed(2)}`;
-
-        // Botón para eliminar una unidad
-        const removeCell = document.createElement("td");
-        const removeBtn = document.createElement("button");
-        removeBtn.className = "btn btn-danger btn-sm";
-        removeBtn.textContent = "-";
-        removeBtn.title = "Remove one";
-        removeBtn.addEventListener('click', () => {
-            removeFromCart(item.id);
-        });
-        removeCell.appendChild(removeBtn);
-
-        row.appendChild(nameCell);
-        row.appendChild(priceCell);
-        row.appendChild(quantityCell);
-        row.appendChild(totalCell);
-        row.appendChild(removeCell);
-
+        const cell = document.createElement("td");
+        cell.colSpan = 5;
+        cell.className = "text-center text-muted";
+        cell.textContent = "Your cart is empty.";
+        row.appendChild(cell);
         cartList.appendChild(row);
-    });
+    } else {
+        cart.forEach(item => {
+            const row = document.createElement("tr");
+            const nameCell = document.createElement("th");
+            nameCell.scope = "row";
+            nameCell.textContent = item.name;
 
+            const priceCell = document.createElement("td");
+            priceCell.textContent = `$${item.price}`;
+
+            const quantityCell = document.createElement("td");
+            quantityCell.textContent = item.quantity;
+
+            const totalCell = document.createElement("td");
+            const total = item.subtotalWithDiscount !== undefined
+                ? item.subtotalWithDiscount
+                : item.price * item.quantity;
+            totalCell.textContent = `$${total.toFixed(2)}`;
+
+            // Botón para eliminar una unidad
+            const removeCell = document.createElement("td");
+            const removeBtn = document.createElement("button");
+            removeBtn.className = "btn btn-danger btn-sm";
+            removeBtn.textContent = "-";
+            removeBtn.title = "Remove one";
+            removeBtn.addEventListener('click', () => {
+                removeFromCart(item.id);
+            });
+            removeCell.appendChild(removeBtn);
+
+            row.appendChild(nameCell);
+            row.appendChild(priceCell);
+            row.appendChild(quantityCell);
+            row.appendChild(totalCell);
+            row.appendChild(removeCell);
+
+            cartList.appendChild(row);
+        });
+    }
     document.getElementById("total_price").textContent = calculateTotal().toFixed(2);
+    updateCartCount();
 }
 
 // ** Nivell II **
