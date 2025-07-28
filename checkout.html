@@ -21,7 +21,7 @@
 
 <body>
 	<!-- Navigation-->
-	<nav class="navbar py-3 py-lg-0 navbar-light bg-light navbar-expand-lg" id="navbar-example2">
+	<nav class="navbar py-3 py-lg-0 navbar-light bg-light navbar-expand-lg sticky-top" id="navbar-example2">
 		<div class="container d-flex">
 			<a class="navbar-brand" href="/index.html">ShopNow</a>
 			<div class="d-flex flex-row order-lg-last align-items-center">
@@ -120,13 +120,13 @@
 					</div>
 					<div class="mt-3">
 						<label for="fPhone" class="form-label">Phone Number:</label>
-						<input id="fPhone" class="form-control" type="number" placeholder="Phone No." />
+						<input id="fPhone" class="form-control" type="text" placeholder="Phone No." />
 						<div id="errorPhone" class="invalid-feedback">Invalid phone number!! Must be 9 digits with no
 							letters</div>
 					</div>
 				</div>
 				<div class="col-12 mt-4 final">
-					<button type="submit" id="btn" class="p-2 px-4 btn btn-primary shadow-lg" onclick="validate()">
+					<button type="submit" id="btn" class="p-2 px-4 btn btn-primary shadow-lg">
 						<i class="fas fa-cart-arrow-down p-2"></i>Save
 					</button>
 				</div>

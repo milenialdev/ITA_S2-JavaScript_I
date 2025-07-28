@@ -1,5 +1,11 @@
+document.addEventListener('DOMContentLoaded', () => {
+	const form = document.querySelector('form');
+	if(form) {
+		form.addEventListener('submit', validate);
+	}
+});
 // Exercise 6
-const validate = () => {
+const validate = (event) => {
 	
 	// Get the input fields
 	const fName = document.getElementById("fName");
@@ -135,9 +141,10 @@ const validate = () => {
 	}
 
 	if(error>0){
+		if(event) event.preventDefault();
 		alert("Please fill in all required fields.");
 	}else{
+		if(event) event.preventDefault();
 		alert("Form submitted successfully");
 	}
-
 }
