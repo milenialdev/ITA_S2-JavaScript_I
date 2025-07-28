@@ -1,3 +1,27 @@
+// Activar botones al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+    // Botones "Add to cart"
+    document.querySelectorAll('.add-to-cart').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const id = parseInt(btn.getAttribute('data-product-id'));
+            buy(id);
+            applyPromotionsCart();
+            printCart();
+        });
+    });
+
+    // Botón "Clean Cart"
+    const cleanBtn = document.getElementById('clean-cart');
+    if (cleanBtn) {
+        cleanBtn.addEventListener('click', () => {
+            cleanCart();
+            applyPromotionsCart();
+            printCart();
+        });
+    }
+});
+
+// Para eliminar productos, añade un botón en cada fila del carrito (printCart)
 // If you have time, you can move this variable "products" to a json or js file and load the data in this js. It will look more professional
 const products = [
     {
@@ -131,7 +155,6 @@ const printCart = () => {
     cart.forEach(item => {
         const row = document.createElement("tr");
         const nameCell = document.createElement("th");
-        
         nameCell.scope = "row";
         nameCell.textContent = item.name;
 
@@ -147,10 +170,22 @@ const printCart = () => {
             : item.price * item.quantity;
         totalCell.textContent = `$${total.toFixed(2)}`;
 
+        // Botón para eliminar una unidad
+        const removeCell = document.createElement("td");
+        const removeBtn = document.createElement("button");
+        removeBtn.className = "btn btn-danger btn-sm";
+        removeBtn.textContent = "-";
+        removeBtn.title = "Remove one";
+        removeBtn.addEventListener('click', () => {
+            removeFromCart(item.id);
+        });
+        removeCell.appendChild(removeBtn);
+
         row.appendChild(nameCell);
         row.appendChild(priceCell);
         row.appendChild(quantityCell);
         row.appendChild(totalCell);
+        row.appendChild(removeCell);
 
         cartList.appendChild(row);
     });
@@ -162,7 +197,21 @@ const printCart = () => {
 
 // Exercise 7
 const removeFromCart = (id) => {
+    // Buscar el producto en el carrito
+    const item = cart.find(product => product.id === id);
+    if (!item) return; // Si no está, no hacemos nada
 
+    if (item.quantity > 1) {
+        item.quantity--;
+    } else {
+        // Si la cantidad es 1, eliminar el producto del carrito
+        const index = cart.findIndex(product => product.id === id);
+        if (index !== -1) cart.splice(index, 1);
+    }
+    // Actualizar promociones
+    applyPromotionsCart();
+    // Actualizar vista del carrito si es necesario
+    if (typeof printCart === 'function') printCart();
 }
 
 const open_modal = () =>  {
