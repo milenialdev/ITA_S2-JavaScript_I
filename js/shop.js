@@ -188,8 +188,22 @@ const printCart = () => {
                 : item.price * item.quantity;
             totalCell.textContent = `$${total.toFixed(2)}`;
 
-            // Botón para eliminar una unidad
+
+            // Botón para sumar una unidad
             const removeCell = document.createElement("td");
+            const addBtn = document.createElement("button");
+            addBtn.className = "btn btn-success btn-sm me-1";
+            addBtn.textContent = "+";
+            addBtn.title = "Add one";
+            addBtn.addEventListener('click', () => {
+                buy(item.id);
+                applyPromotionsCart();
+                printCart();
+                updateCartCount();
+            });
+            removeCell.appendChild(addBtn);
+
+            // Botón para eliminar una unidad
             const removeBtn = document.createElement("button");
             removeBtn.className = "btn btn-danger btn-sm";
             removeBtn.textContent = "-";
