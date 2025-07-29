@@ -31,8 +31,11 @@ ITA_S2-JavaScript_I/
 ├── README.md                 # Este archivo
 └── .gitignore
 
+<<<<<<< HEAD
 ```
 ```
+=======
+>>>>>>> 3aea426b72b90b46c90f0470b2db16df3a94dcf5
 Branch: Exercicis
 ITA_S2-JavaScript_I/
 ├── exercicis-js/                      # Exercicis dividits per tema
