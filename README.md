@@ -1,18 +1,38 @@
-# 🧠 ITA_S2-JavaScript_I
+# Sprint 2 IT Academy | Shop
+# Repositorio del Sprint 2 de JavaScript del curso de desarrollo Front-End en IT Academy.
 
-Repositori del **Sprint 2 de JavaScript** del curs de desenvolupament Front-End a **IT Academy**.
+Este repositorio contiene:
 
-Aquest repositori conté:
+🧪 Un conjunto completo de ejercicios prácticos sobre funciones modernas de JavaScript. (branch: Exercicis)
+🛒 E-commerce, con implementaciones en el carrito. (branch: Main)
 
-- 🧪 Un conjunt complet d’exercicis pràctics sobre funcions modernes de JavaScript.
-- 🛒 L’estructura inicial per a una demo funcional d’una aplicació e-commerce (encara no implementada).
+# 🛒 Sprint 2 IT Academy | Shop
+
+## Descripción
+
+Proyecto de demo e-commerce realizado en el Sprint 2 de IT Academy. Permite gestionar un carrito de compra, aplicar promociones y simular el proceso de compra online. Incluye una interfaz responsive con Bootstrap y una estructura modular en JavaScript.
 
 ---
 
-## 📁 Estructura del repositori
 
+## 📁 Estructura del proyecto
 
 ```
+Branch main
+ITA_S2-JavaScript_I/
+├── index.html                # Página principal de la tienda
+├── checkout.html             # Página de checkout
+├── js/
+│   ├── shop.js               # Lógica de la tienda y carrito
+│   └── checkout.js           # Lógica de validación en checkout
+├── css/
+│   └── styles.css            # Estilos personalizados
+├── images/                   # Imágenes de productos y recursos
+├── README.md                 # Este archivo
+└── .gitignore
+
+```
+Branch: Exercicis
 ITA_S2-JavaScript_I/
 ├── exercicis-js/                      # Exercicis dividits per tema
 │   ├── exercici-1.1-arrow-functions/
@@ -33,14 +53,10 @@ ITA_S2-JavaScript_I/
 │   ├── exercici-1.6-array-loops/
 │   │   ├── index.js
 │   │   └── ejercicio6.html
-│   ├── exercici-1.7-promises-async-await/
-│   │   ├── index.js
-│   │   └── ejercicio7.html
-│   ├── index.html
-│   └── style.css                      # Full d'estils reutilitzable per a tots els exercicis
-│
-├── ecommerce-demo/                    # Carpeta buida (es prepararà més endavant)
-│   └── .gitkeep
+│   └── exercici-1.7-promises-async-await/
+│       ├── index.js
+│       └── ejercicio7.html
+│   └── style.css                      # Full d'estils reutilitzable per a tots els exercicis                
 │
 ├── .gitignore
 └── README.md
@@ -49,81 +65,42 @@ ITA_S2-JavaScript_I/
 ---
 
 
-## ✅ Exercicis JavaScript inclosos
 
-Dins de la carpeta `exercicis-js/` trobaràs:
+## ✅ Ejercicios JavaScript incluidos
 
-- Una subcarpeta per a cada exercici, amb el seu propi `index.js` i un fitxer HTML per visualitzar-lo (`ejercicioX.html`).
-- Un fitxer `style.css` comú i reutilitzable per a tots els exercicis.
+Cada carpeta dentro de `exercici-js/` contiene un `index.js` con los ejercicios correspondientes:
 
-**Detall de la part d'exercicis-js:**
-
-```
-exercicis-js/
-├── exercici-1.1-arrow-functions/
-│   ├── index.js
-│   └── ejercicio1.html
-├── exercici-1.2-operador-ternari/
-│   ├── index.js
-│   └── ejercicio2.html
-├── exercici-1.3-callbacks/
-│   ├── index.js
-│   └── ejercicio3.html
-├── exercici-1.4-rest-spread-operators/
-│   ├── index.js
-│   └── ejercicio4.html
-├── exercici-1.5-array-transformations/
-│   ├── index.js
-│   └── ejercicio5.html
-├── exercici-1.6-array-loops/
-│   ├── index.js
-│   └── ejercicio6.html
-├── exercici-1.7-promises-async-await/
-│   ├── index.js
-│   └── ejercicio7.html
-└── style.css
-```
+1. **Exercicis 1.1:** Funciones flecha (`=>`)
+2. **Exercicis 1.2:** Operador ternario (`? :`)
+3. **Exercicis 1.3:** Callbacks
+4. **Exercicis 1.4:** Operadores Rest & Spread (`...`)
+5. **Exercicis 1.5:** Transformaciones de arrays (`map`, `filter`, `reduce`, etc.)
+6. **Exercicis 1.6:** Bucles y recorridos (`forEach`, `for-of`, etc.)
+7. **Exercicis 1.7:** Promesas y async/await
 
 ---
 
-## 🛠️ Tecnologies
+## 🛠️ Tecnologías utilizadas
 
 - JavaScript ES6+
-- HTML5 (en la demo)
-- CSS3 (en la demo)
-- Eines suggerides: `live-server`, `eslint`, `npm`
+- HTML5
+- CSS3
+- Bootstrap
+- Herramientas sugeridas: `live-server`, `eslint`, `npm`
 
 ---
+
 
 ## 🔜 E-commerce Demo
 
-La carpeta `ecommerce-demo/` està preparada per implementar una botiga online amb:
+La carpeta `ecommerce-demo/` está preparada para implementar una tienda online con:
 
-- Gestió del carret de compra
-- Aplicació de promocions
-- Validació de formulari de checkout
-- Maquetació bàsica
+- Gestión del carrito de compra
+- Aplicación de promociones
+- Validación de formulario de checkout
+- Maquetación básica
 
-Aquesta part s'implementarà a partir del **Dia 5 del Sprint**.
-
----
-
-
----
-
-## 🌳 Estratègia de branques
-
-El flux de treball amb branques per a aquest repositori és el següent:
-
-- **e-commerce**: branca de desenvolupament actiu de la web d'e-commerce. Aquí es realitza tot el treball i proves de noves funcionalitats relacionades amb la botiga online.
-- **develop**: branca d'integració estable. Quan una versió de la web d'e-commerce és estable, es fusiona aquí des de `e-commerce`.
-- **main**: branca principal. Només rep versions finals i totalment validades, prèviament integrades a `develop`.
-
-El flux habitual és:
-
-1. Es treballa i es fan commits a `e-commerce`.
-2. Quan la versió és estable, es fa merge a `develop`.
-3. Quan la versió és definitiva, es fa merge a `main`.
+Esta parte se implementará a partir del **Día 5 del Sprint**.
 
 ---
 
