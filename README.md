@@ -32,6 +32,7 @@ ITA_S2-JavaScript_I/
 └── .gitignore
 
 ```
+```
 Branch: Exercicis
 ITA_S2-JavaScript_I/
 ├── exercicis-js/                      # Exercicis dividits per tema
